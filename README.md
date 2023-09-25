@@ -7,4 +7,8 @@ If enabled the program will display a bunch of information about a GitHub or Sta
 Do be patient, I chose a strong model to summarize the text (facebook bart-large-cnn) so summarizing can sometimes take ten or twenty seconds depending on how much compute i have the back end set to allocate on any given day
 
 ! this code is lightly edited from the actual deployment to shield some of the security stuff // so if you have any recomended changes i'll input them by hand after review
+
+- the main deployment is a google cloud function and the summarizer is on Cloud Run to limit cold starts
+
 ! the complexity in the summary function is mostly to limit the size of the ReadMe input to avoid maxing out the token limits. if you need something truly huge summarized let me know and i'll send you the script modifications to chunk it out into bites and sew it back together
+
